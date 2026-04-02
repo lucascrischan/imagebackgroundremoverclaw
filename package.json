@@ -9,7 +9,6 @@
     "start": "next start",
     "lint": "eslint"
   },
-  },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.17.3",
     "next": "16.2.0",
