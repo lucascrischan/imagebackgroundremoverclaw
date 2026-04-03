@@ -26,4 +26,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       return session;
     },
   },
+  logger: {
+    error(error) {
+      console.error("NextAuth error:", error);
+    },
+    warn(code) {
+      console.warn("NextAuth warn:", code);
+    },
+  },
 });
