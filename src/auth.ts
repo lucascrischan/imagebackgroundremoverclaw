@@ -3,6 +3,7 @@ import Google from "next-auth/providers/google";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
+  debug: true,  // ← 新增这行
   providers: [
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -32,6 +33,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
     warn(code) {
       console.warn("NextAuth warn:", code);
+    },
+    debug(code, metadata) {  // ← 新增这个方法
+      console.log("NextAuth debug:", code, JSON.stringify(metadata, null, 2));
     },
   },
 });
