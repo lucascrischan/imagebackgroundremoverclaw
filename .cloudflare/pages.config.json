@@ -1,4 +1,6 @@
 {
   "framework": "nextjs",
-  "buildbot_caches": ["none"]
+  "buildbot_caches": ["none"],
+  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_date": "2024-09-23"
 }
